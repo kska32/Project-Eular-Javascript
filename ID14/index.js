@@ -9,7 +9,7 @@ function solution(n){
     }
     let max = 0;
     let startNo = 0;
-    for(let i=1; i<n; i++){
+    for(let i=1; i<n; i+=2){
         let c = collatz(i);
         if(max<c){
             max = c;
