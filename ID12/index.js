@@ -6,7 +6,6 @@ function solution(x){
         }
         return s;
     }
-
     let devisorCount = (n)=>{
         let maxPrimeFac = (S,D=2)=>{
             if( D*D <= S ){
@@ -28,13 +27,14 @@ function solution(x){
         }
         return Object.values(r).reduce((a,c)=>a*c);
     }
-
     for(let i=2; true; i++){
         let nthTri = nThTriNum(i);
         let dc = devisorCount(nthTri);
         if(dc>=x) return [nthTri,i];    
     }
 }
+
+//76576500,
 
 console.time("start");
     console.log(solution(500));
