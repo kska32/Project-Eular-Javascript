@@ -34,8 +34,6 @@ function solution(x){
     }
 }
 
-//76576500,
-
 console.time("start");
     console.log(solution(500));
 console.timeEnd("start");
