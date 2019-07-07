@@ -17,7 +17,7 @@ function solution(){
             case 2:
                 return c[n] ? c[n] : c[n[0]+'0'] + c[n[1]];
             case 3:
-                return c[n[0]] + 'hundred' + (Number(n[1]+n[2])>0 ? ('and'+ (Number(n[1])===0 ? converter(n[2]) : converter(n[1]+n[2]))) : '');
+                return c[n[0]] + 'hundred' + (Number(n[1]+n[2])>0 ? 'and'+converter(Number(n[1]+n[2])) : '');
             case 4:
                 return 'onethousand'
         }
