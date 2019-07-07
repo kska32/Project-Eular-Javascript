@@ -1,3 +1,6 @@
+//javascript in node.js
+//takes 7.889ms,  I7-4710HQ
+
 function solution(){
     function converter(n){
         n = String(n);
