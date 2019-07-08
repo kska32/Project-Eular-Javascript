@@ -1,7 +1,7 @@
 //javascript in node
 //takes 5.545ms, I7-4710HQ
 function solution(){
-    const t = [ 
+    const c = [ 
         [75],
         [95, 64],
         [17, 47, 82],
@@ -19,17 +19,15 @@ function solution(){
         [04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23]
     ];
 
-
-    let c = t.map((v)=>[...v]);
-    for(let i=0; i<t.length-1; i++){
-        for(let h=0; h<t[i].length; h++){
-            let o1 = c[i][h] + t[i+1][h];
-            let o2 = c[i][h] + t[i+1][h+1];
-            c[i+1][h] = (c[i+1][h] < o1) ? o1 : c[i+1][h];
-            c[i+1][h+1] = (c[i+1][h+1] < o2) ? o2 : c[i+1][h+1];
+    for(let i=c.length-1; i>0; i--){
+        for(let h=0; h<c[i].length-1; h++){
+            let oo = c[i-1][h];
+            let o1 = oo + c[i][h];
+            let o2 = oo + c[i][h+1];
+            c[i-1][h] = o1>o2 ? o1 : o2;
         }
     }
-    return Math.max(...c.pop());
+    return c[0][0];
 }
 
 console.time("start");
