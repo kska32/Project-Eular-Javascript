@@ -1,3 +1,5 @@
+//javascript in node, I7-4710HQ
+//takes 4.249ms
 function solution(){
     let isLeapYear = (x)=>x % 100 === 0 ? x % 400 === 0 : x % 4 ===0;
     let m = (nthYear)=>{
