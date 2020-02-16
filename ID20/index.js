@@ -11,7 +11,7 @@ function solution(){
         }else{
             ret = math.bignumber(n);
         }  
-        return math.bignumber(ret);
+        return math.bignumber(ret); //123
     }
 
 
